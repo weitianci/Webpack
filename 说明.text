@@ -1,0 +1,4 @@
+webpack将js代码压缩到bundle.js，然后html引用bundle.js
+    webpack-cli --entry ./app/main.js --output ./public/bundle.js
+快捷输入：npm run div 相当于：webpack-cli --entry ./app/main.js --output ./public/bundle.js
+打包文件：npm run build
