@@ -14,6 +14,15 @@ module.exports = {
         historyApiFallback: true, // 不跳转
         inline: true, // 实时更新
         port: 8080, // 服务器启动的端口号
+        proxy:{
+            // 代理，用于跨域就会配置
+            // $.ajax({url:"api/getList"})
+            // $.ajax({url:"user/getList"})
+            '/^api':{
+                // 如果接口中含有api，那么这个借口就要跨域
+                target:"http://localhost:9000" // 将要跨域路径地址
+            }
+        }
     },
     module: {
         // module用来配置loader
